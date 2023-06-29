@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:ital@0;1&display=swap');
+
+
 html {
     box-sizing: border-box;
 }
@@ -8,7 +11,9 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-size: inherit;
+    /*font-size: inherit;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
 }
 
 a, a:visited, a:hover {
@@ -20,15 +25,25 @@ ul li {
     list-style: none;
 }
 
+button {
+    border: none;
+    outline: none;
+    background: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
 :root {
     font-size: 10px;
     --black: #0d1116;
     --black-object: #161b22;
     --black-border: #21262d;
     --white-text: #e6edf3;
+    --gray-text: #7d8590;
 }
 
 .container {
+    padding:  0 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -37,5 +52,12 @@ body {
     background: var(--black);
     min-height: 100vh;
     color: var(--white-text);
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 700px) {
+    :root {
+        font-size: 8px;
+    }
 }
