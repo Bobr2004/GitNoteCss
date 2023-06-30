@@ -12,12 +12,27 @@
 }
 
 .header__menu-item {
-    padding: 0.1em 0.4em;
+    padding: 0.1em 0.8em;
+    border-radius: 6px;
+    position: relative;
+}
+
+
+.header__menu-item--active::before {
+    content: "";
+    width: 110%;
+    height: 2px;
+    background: #f68166;
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+
+    /*background: #182028;*/
+    border-bottom: 1px solid #f68166;
 }
 
 .header__menu-item:hover {
     background: #182028;
-    border-radius: 6px;
 }
 
 #cb1 {

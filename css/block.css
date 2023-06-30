@@ -6,7 +6,8 @@
     gap: 2rem;
 }
 
-.block__header {
+.block__title {
+    font-family: 'Open Sans', sans-serif;
     font-size: 4rem;
     font-weight: 700;
 }
@@ -34,6 +35,7 @@
     padding: 0.5rem 0.9rem;
     border: 1px solid #363b42;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .block__code-copy:hover {
@@ -46,9 +48,6 @@
     background: #161b22;
 }
 
-.block__code-copy:hover svg path {
-    stroke: #949eab;
-}
 
 .block__code-command {
     font-size: 3rem;

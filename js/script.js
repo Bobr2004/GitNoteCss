@@ -1,5 +1,5 @@
 function copyFrom(src) {
-    return function () {
+    return () => {
         let codeBlock = this.parentNode;
         let commandText = codeBlock.querySelector(src).innerText;
 
