@@ -19,7 +19,8 @@
                 <input type="checkbox" id="cb1">
                 <label class="header__toggle" for="cb1"></label>
                 <ul class="header__menu">
-                    <li class="header__menu-item header__menu-item--active"><a href="" class="header__menu-link">Git</a></li>
+                    <li class="header__menu-item header__menu-item--active"><a href="" class="header__menu-link">Git</a>
+                    </li>
                     <li class="header__menu-item"><a href="" class="header__menu-link">GitHub</a></li>
                     <li class="header__menu-item"><a href="" class="header__menu-link">Test</a></li>
                 </ul>
@@ -31,25 +32,21 @@
             <section class="block">
                 <h2 class="block__title">Set up</h2>
                 <div class="block__code">
-                    <button class="block__code-copy" onclick = "copyText()">
-                        <img src="images/copy.svg" alt="copy">
-                    </button>
-                    <p class="block__code-command">git config -l</p>
-                    <p class="block__code-explaining">Show all git settings</p>
+                    <div class="block__code-text">
+                        <p class="block__code-command">git config -l</p>
+                        <p class="block__code-explaining">Show all git settings</p>
+                    </div>
+                    <div class="block__code-button">
+                        <button class="block__code-copy">
+                            <img src="images/copy.svg" alt="copy">
+                        </button>
+                    </div>
                 </div>
-                <div class="block__code">
-                    <button class="block__code-copy" onclick = "copyText()">
-                        <img src="images/copy.svg" alt="copy">
-                    </button>
-                    <p class="block__code-command">git config user.name "name"</p>
-                    <p class="block__code-explaining">Change default git user name</p>
-                </div>
-
             </section>
         </div>
     </main>
 </div>
 
-<script src = "js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
