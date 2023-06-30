@@ -1,24 +1,18 @@
-function copyText() {
-    // Get the text from the <p> element
-    var text = document.querySelector(".block__code-command").innerText;
+function copyFrom(src) {
+    return function () {
+        let codeBlock = this.parentNode;
+        let commandText = codeBlock.querySelector(src).innerText;
 
-    // Create a temporary input element
-    var tempInput = document.createElement("input");
+        let tempInput = document.createElement('input');
+        tempInput.value = commandText;
+        document.body.appendChild(tempInput);
 
-    // Set the value of the input element to the text
-    tempInput.value = text;
+        tempInput.select();
+        document.execCommand('copy');
 
-    // Append the input element to the document
-    document.body.appendChild(tempInput);
-
-    // Select the text in the input element
-    tempInput.select();
-    tempInput.setSelectionRange(0, 99999); // For mobile devices
-
-    // Copy the selected text to the clipboard
-    document.execCommand("copy");
-
-    // Remove the temporary input element
-    document.body.removeChild(tempInput);
-
+        document.body.removeChild(tempInput);
+    }
 }
+
+const copyButtons = document.querySelectorAll('.block__code-copy');
+copyButtons.forEach( button => button.addEventListener('click',copyFrom('.block__code-command')))
