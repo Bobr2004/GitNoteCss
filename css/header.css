@@ -7,7 +7,17 @@
 
 .header__menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header__menu-item {
+    padding: 0.1em 0.4em;
+}
+
+.header__menu-item:hover {
+    background: #182028;
+    border-radius: 6px;
 }
 
 #cb1 {

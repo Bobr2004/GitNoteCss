@@ -38,6 +38,16 @@
 
 .block__code-copy:hover {
     border: 1px solid #4d545e;
+    background: #191e26;
+}
+
+.block__code-copy:active {
+    border: 1px solid #454a54;
+    background: #161b22;
+}
+
+.block__code-copy:hover svg path {
+    stroke: #949eab;
 }
 
 .block__code-command {
