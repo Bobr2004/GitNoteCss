@@ -43,6 +43,8 @@
     border: 1px solid #363b42;
     border-radius: 6px;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 .block__code-copy img {
     height: 1em;
@@ -51,12 +53,21 @@
     top: 0.2rem;
 }
 
-.block__code-copy--copied img{
-    display: none;
-}
+/*.block__code-copy--copied img{*/
+/*    display: none;*/
+/*}*/
 
-.block__code-copy--copied::after {
+
+.block__code-copy--copied::before {
+    border-radius: 6px;
+    z-index: 2;
+    position: absolute;
+    padding: 0.35rem 0.8rem;
+    top:-3%;
+    right:-10%;
     content: "Copied!";
+    border: 1px solid #4d545e;
+    background: #191e26;
 }
 
 .block__code-copy:hover {
