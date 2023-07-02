@@ -85,6 +85,11 @@
         display: block;
     }
 
+    #cb1:checked ~ .header__toggle {
+        transform: scale(1.25);
+        background: url("../images/x.svg");
+    }
+
     #cb1:checked ~ .header__menu{
         margin: 2rem 0 0 0;
         max-height: 100%;
